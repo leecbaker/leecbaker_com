@@ -1,0 +1,27 @@
+{% extends 'base.tpl' %}
+{% block content %}
+<h2>Contact information</h2>
+
+<p>
+<span style="font-size: 130%;"><b>I am current traveling, and may not be able to get back to you for several days. Email is the best way of contacting me.</b></span>
+</p>
+
+<!--p>
+<span style="font-size: 130%;">
+Phone (US): +1-505-480-2209 (Leave a message)<br />
+<!--- Phone (NZ): +64 022 104 7224 -->
+</span>
+</p --->
+<p style="font-size: 130%;">
+Email: lee@leecbaker.com
+</p>
+<p style="font-size: 130%;">
+Skype: <a href="skype:leecbaker">leecbaker</a>
+</p>
+<p style="font-size: 130%;">
+LinkedIn: <a href="http://www.linkedin.com/in/leecbaker">linkedin.com/in/leecbaker</a>
+</p>
+<p style="font-size: 130%;">
+Facebook: <a href="http://www.facebook.com/leecb">facebook.com/leecb</a>
+</p>
+{% endblock content %}
