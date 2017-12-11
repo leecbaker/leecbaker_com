@@ -9,6 +9,17 @@
 <style>
 {% block css %}{% endblock %}
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9422367-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9422367-1');
+</script>
+
+
 </head>
 <body>
 <div id="page">
@@ -34,26 +45,9 @@
 
 <div id="footerbar">
 <span id="copyright">
-&copy; 2014 Lee Baker. All rights reserved.
+&copy; 2017 Lee Baker. All rights reserved.
 </span>
 </div>
 </div>
-
-<?
-$request_ip = $_SERVER['REMOTE_ADDR'];
-if('127.0.0.1' != $request_ip)
-{
-?>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-9422367-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-<? } ?>
-
 </body>
 </html>
