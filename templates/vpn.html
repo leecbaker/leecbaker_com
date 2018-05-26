@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>VPN client configuration</h1>
+
+<p>You will need a username and password from me before you can use this VPN.</p>
+<p>The VPN server will make your computer appear like it is somewhere in New York, NY USA, and should go around most web filters. It does not make you anonymous.</p>
+
+<h3>Mac / iPhone / iPad</h3>
+<p>Download this file: <a href="/files/vpn-ios-or-mac.mobileconfig">VPN settings</a>
+</p>
+
+<h3>Android</h3>
+<p>
+    Download the strongSwan app from the Play Store: <a href="https://play.google.com/store/apps/details?id=org.strongswan.android">Here</a>
+</p>
+
+<pre>
+Server: util.leecb.com
+VPN Type: IKEv2 EAP (Username/Password)
+Username and password: as configured on the server
+CA certificate: Select automatically
+</pre>
+
+<h4>Windows 10 Pro</h4>
+<pre>
+Please run the following commands in PowerShell:
+
+Add-VpnConnection -Name "util.leecb.com" `
+  -ServerAddress "util.leecb.com" `
+  -TunnelType IKEv2 `
+  -EncryptionLevel Maximum `
+  -AuthenticationMethod EAP `
+  -RememberCredential
+
+Set-VpnConnectionIPsecConfiguration -ConnectionName "util.leecb.com" `
+  -AuthenticationTransformConstants GCMAES256 `
+  -CipherTransformConstants GCMAES256 `
+  -EncryptionMethod AES256 `
+  -IntegrityCheckMethod SHA256 `
+  -DHGroup ECP384 `
+  -PfsGroup ECP384 `
+  -Force
+</pre>
+
+{% endblock content %}
