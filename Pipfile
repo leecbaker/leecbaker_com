@@ -4,10 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+jinja2 = "*"
+black = "21.5b1"
+isort = "*"
 
 [packages]
-flask = "*"
-uwsgi = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

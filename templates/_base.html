@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Lee Baker is an electrical engineer who enjoys hiking, paragliding and travelling." />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if canonical_url is defined -%}
+	{#- if canonical_url is none, then we don't want a canonical URL. For example, 404 page -#}
+	{%- if canonical_url is not none -%}
+	<link href="{{canonical_url}}" rel="canonical">
+	{%- endif -%}
+	{% elif output_filename is defined %}
+	<link href="https://othram.com/{{output_filename}}" rel="canonical">
+	{%- else -%}
+	{#- This variable is technically undocumented, but it is an easy way to build canonical URLs -#}
+	{#- https://stackoverflow.com/a/40346872/242552 -#}
+	<link href="https://othram.com/{{self._TemplateReference__context.name}}" rel="canonical">
+	{%- endif %}
+    <link rel="StyleSheet" type="text/css" href="css/default.css" />
+    <link rel="StyleSheet" type="text/css" href="css/fontawesome.min.css" />
+    <link rel="StyleSheet" type="text/css" href="css/brands.min.css" />
+    <link rel="StyleSheet" type="text/css" href="css/solid.min.css" />
+    <title>{% block title %}Lee Baker :: Outdoor adventures, software projects, resume, and contact info{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9422367-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-9422367-1');
+    </script>
+
+    {% block extra_header %} {% endblock extra_header %}
+</head>
+
+<body>
+    <header>
+        <div class="container round-bottom" id="titlebar">
+            <div id="title">Lee C. Baker</div>
+
+            <div id="title_links">
+                <a target="_blank" href="https://fb.me/leecb" rel="noreferrer" aria-label="Facebook page"><i class="fab fa-facebook-square"></i></a>
+                <a target="_blank" href="https://github.com/leecbaker/" rel="noreferrer" aria-label="Github page"><i class="fab fa-github-square"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/leecbaker" rel="noreferrer" aria-label="LinkedIn page"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container round-top round-bottom">
+            <div id="content">
+                {% block content %} {% endblock content %}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container round-top">
+            <span id="copyright">&copy; 2011-{{now.year}} Lee C. Baker</span>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,6 +1,50 @@
-{% extends '_base.html' %}
-{% set canonical_url = "https://leecbaker.com/" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Lee Baker is an electrical engineer who enjoys hiking, paragliding and travelling." />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://leecbaker.com/" rel="canonical">
+    <link rel="StyleSheet" type="text/css" href="css/default.css" />
+    <link rel="StyleSheet" type="text/css" href="css/fontawesome.min.css" />
+    <link rel="StyleSheet" type="text/css" href="css/brands.min.css" />
+    <link rel="StyleSheet" type="text/css" href="css/solid.min.css" />
+    <title>Lee Baker :: Outdoor adventures, software projects, resume, and contact info</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9422367-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-9422367-1');
+    </script>
+
+     
+</head>
+
+<body>
+    <header>
+        <div class="container round-bottom" id="titlebar">
+            <div id="title">Lee C. Baker</div>
+
+            <div id="title_links">
+                <a target="_blank" href="https://fb.me/leecb" rel="noreferrer" aria-label="Facebook page"><i class="fab fa-facebook-square"></i></a>
+                <a target="_blank" href="https://github.com/leecbaker/" rel="noreferrer" aria-label="Github page"><i class="fab fa-github-square"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/leecbaker" rel="noreferrer" aria-label="LinkedIn page"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container round-top round-bottom">
+            <div id="content">
+                
 
 <!-- div class="sectionblock">
 <h3>Embedded systems engineer<span class="categorylabel">Professional career</span></h3>
@@ -47,10 +91,19 @@ Though currently employed as an engineer, I'm always open to discussing other op
 
     <p><i class="fas fa-map-marker-alt"></i> Houston, TX</p>
     <p><i class="fas fa-envelope"></i> <a href="mailto:lee@leecbaker.com">lee@leecbaker.com</a></p>
-    {#
-    <p><i class="fab fa-skype"></i> <a href="skype:leecbaker">leecbaker</a></p>
-    <p><i class="fab fa-linkedin-in"></i> <a href="http://www.linkedin.com/in/leecbaker">linkedin.com/in/leecbaker</a></p>
-    #}
+    
     <p><i class="fab fa-facebook-f"></i> <a href="http://www.facebook.com/leecb">fb.me/leecb</a></p>
 </div>
-{% endblock content %}
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container round-top">
+            <span id="copyright">&copy; 2011-2021 Lee C. Baker</span>
+        </div>
+    </footer>
+</body>
+
+</html>
