@@ -1,9 +1,30 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     background-color: #333;
     margin: 0px 0px 0px 0px;
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
     list-style-position: inside;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-grow: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-grow: 0;
 }
 
 a {
@@ -57,10 +78,6 @@ a {
     border-radius: 3px;
 }
 
-section .container {
-    background: white;
-}
-
 #content {
     padding: 1em;
 }
@@ -75,22 +92,25 @@ section .container {
 
 header {
     height: 220px;
+    margin-bottom: 0.5em;
 }
 
 header .container {
     background:  url('../img/lcb_com_header.jpg') no-repeat top;
     background-size: cover;
-    margin-bottom: 1em;
 }
 
-section .container {
-    margin-top: 1em;
-    margin-bottom: 1em;
+main .container {
+    background: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
 }
 
 footer .container {
-    background-color: #aaa;
-    margin-top: 1em;
+    background-image: linear-gradient(52deg,rgb(81, 107, 123), rgb(103, 108, 64));
+    margin-top: 0.5em;
     padding-bottom: 2em;
     padding-top: 1em;
 }
@@ -120,15 +140,15 @@ footer .container {
     padding-left: 20px;
 }
 
-.sectionblock img {
+section img {
     vertical-align: middle;
     padding: 4px;
 }
 
-.sectionblock {
+section {
     border-bottom: 2px solid #ddd;
 }
 
-.sectionblock:last-child {
+section:last-child {
     border-bottom: none;
 }

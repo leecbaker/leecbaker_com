@@ -1,4 +1,10 @@
 leecbaker.com
 =============
 
-leecbaker.com website
+
+# Build instructions
+
+```bash
+pipenv run python build.py
+./deploy.sh
+```
