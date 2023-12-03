@@ -1,0 +1,28 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: #333;
+    margin: 0px 0px 0px 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    list-style-position: inside;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-grow: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-grow: 0;
+}

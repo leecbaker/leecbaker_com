@@ -1,0 +1,62 @@
+
+header {
+
+    #title {
+        color: white;
+        border-spacing: 10px;
+        vertical-align: top;
+        text-align: center;
+        width: 100%;
+        font-size: x-large;
+        font-style: italic;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-shadow: #222 1px -0px 5px;
+    }
+
+    #title_links {
+        margin-top: 40px;
+        display:flex;
+        justify-content:flex-start;
+    }
+
+    #title_links a, #title_links {
+        margin-left: 0px;
+        padding: 1em;
+        color: white;
+        fill:white;
+        font-weight: bold;
+        font-size: 18pt;
+        text-decoration: none;
+    }
+
+    #title_links a:hover {
+        background: black;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 3px;
+    }
+
+    height: 220px;
+    margin-bottom: 0.5em;
+
+
+    .container {
+        background:  url('../img/lcb_com_header.jpg') no-repeat top;
+        background-size: cover;
+    }
+
+    #titlebar {
+        height: 100%;
+
+        #title {
+            padding-top: 60px;
+        }
+    
+        #title_links a {
+            padding: 0.5em;
+            padding-top: 0.4em;
+            padding-bottom: 0.4em;
+        }
+    }
+
+}

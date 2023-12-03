@@ -2,27 +2,29 @@
 {% set canonical_url = "https://leecbaker.com/" %}
 {% block content %}
 
-<!-- div class="sectionblock">
+{#
+<div class="sectionblock">
 <h3>Embedded systems engineer<span class="categorylabel">Professional career</span></h3>
 
 Though currently employed as an engineer, I'm always open to discussing other opportunities. Specialties include embedded system design and development, data mining and scientific computing. <b>Please contact me for a complete version of the resume, as I do not post the complete version on the internet.</b>
 <p />
 <a href="resume.pdf">Resume - Internet version [PDF]</a> <br />
 <a href="http://www.linkedin.com/in/leecbaker">LinkedIn profile</a>
-</div -->
+</div>
+#}
 
 <section>
     <h3>Projects and Products</h3>
     <p><span style="font-size:larger;">Flight simulation</span>: <a href="https://planecommand.com">PlaneCommand</a>, <a href="https://datareftool.com">DataRefTool</a></p>
     <p><span style="font-size:larger;">Websites</span>: <a href="http://www.planecrashmap.com">PlaneCrashMap.com</a>, <a href="http://www.mineralresourcemap.com">MineralResourceMap.com</a></p>
     <h4>Retired projects</h4>
-    <p style="font-size: smaller;"><i class="fas fa-exclamation-triangle"></i> No longer maintained or supported.<br />
+    <p style="font-size: smaller;">{% include "svg/triangle-exclamation-solid.html" %} No longer maintained or supported.<br />
     Mac apps: <a href="http://itunes.apple.com/us/app/announce/id501246433?mt=12">Announce</a>, <a href="http://itunes.apple.com/us/app/travelguide/id468392341?mt=12">TravelGuide</a>, <a href="http://itunes.apple.com/us/app/batteryexpert/id478239542?mt=12">BatteryExpert</a>,
         <a href="apps/unitcalc/">UnitCalc</a>, <a href="http://itunes.apple.com/nz/app/quicktide/id449485038">QuickTide</a>, <a href="http://itunes.apple.com/nz/app/latinizer/id462552313?mt=12">Latinizer</a>
     <br />iPhone apps: <a href="http://itunes.apple.com/us/app/travelguide-mobile/id492161373?mt=8">TravelGuide Mobile</a></p>
 
 </section>
-
+{#
 <section>
     <h3>Backpacking<span class="categorylabel">Travel</span></h3>
     I'm currently traveling in Australia, New Zealand, and the southeast Asia region. Here are some places that I've been, with links to the routes I took:
@@ -40,14 +42,14 @@ Though currently employed as an engineer, I'm always open to discussing other op
     <p><a href="http://www.elpasoparagliding.com">El Paso Paragliding - my instructor</a></p>
     <p><a href="http://picasaweb.google.com/leecbaker2/2009NewZealand">Pictures from last year's trip to New Zealand</a></p>
 </section>
-
+ #}
 <section>
     <h3>Contact</h3>
 
     <div style="display:grid; grid-template-columns: 1em auto; grid-gap: 0.5em;">
-        <div style="justify-self:center;"><i class="fas fa-map-marker-alt"></i></div><div>Houston, TX</div>
-        <div style="justify-self:center;"><i class="fas fa-envelope"></i></div><div><a href="mailto:lee@leecbaker.com">lee@leecbaker.com</a></div>
-        <div style="justify-self:center;"><i class="fab fa-facebook-f"></i></div><div><a href="http://www.facebook.com/leecb">fb.me/leecb</a></div>
+        <div style="justify-self:center;">{% include "svg/location-dot-solid.html" %}</div><div>Houston, TX</div>
+        <div style="justify-self:center;">{% include "svg/envelope-solid.html" %}</div><div><a href="mailto:lee@leecbaker.com">lee@leecbaker.com</a></div>
+        <div style="justify-self:center;">{% include "svg/facebook-f.html" %}</div><div><a href="http://www.facebook.com/leecb">fb.me/leecb</a></div>
         {#
         <div style="justify-self:center;"><i class="fab fa-skype"></i></div><div><a href="skype:leecbaker">leecbaker</a></div>
         <div style="justify-self:center;"><i class="fab fa-linkedin-in"></i></div><div><a href="http://www.linkedin.com/in/leecbaker">linkedin.com/in/leecbaker</a></div>

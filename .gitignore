@@ -3,3 +3,6 @@ venv/
 .venv
 .vscode
 site/
+public/
+public_prod/
+public_dev/
