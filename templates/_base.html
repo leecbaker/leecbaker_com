@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Lee Baker is an electrical engineer who enjoys hiking, paragliding and travelling." />
+    <meta name="description" content="Lee Baker is an engineer who enjoys hiking, paragliding and travelling." />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if canonical_url is defined -%}
@@ -10,8 +10,8 @@
 	<link href="{{canonical_url}}" rel="canonical">
 	{%- endif -%}
 	{%- endif %}
-    <link rel="StyleSheet" type="text/css" href="css/default.css" />
-    <title>{% block title %}Lee Baker :: Outdoor adventures, software projects, resume, and contact info{% endblock title %}</title>
+    <link rel="StyleSheet" type="text/css" href="{{ get_url(path='css/default.css', cachebust=true) }}" />
+    <title>{% block title %}Lee Baker{% endblock title %}</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -33,31 +33,29 @@
 </head>
 
 <body>
-    <header>
-        <div class="container round-bottom" id="titlebar">
-            <div id="title">Lee C. Baker</div>
+    <div class="container">
+        <header>
+            <div id="titlebar">
+                <div id="title">Lee C. Baker</div>
 
-            <div id="title_links">
-                <a target="_blank" href="https://fb.me/leecb" rel="noreferrer" aria-label="Facebook page">{% include "svg/square-facebook.html" %}</i></a>
-                <a target="_blank" href="https://github.com/leecbaker/" rel="noreferrer" aria-label="Github page">{% include "svg/square-github.html" %}</a>
-                <a target="_blank" href="https://www.linkedin.com/in/leecbaker" rel="noreferrer" aria-label="LinkedIn page">{% include "svg/linkedin.html" %}</i></a>
+                <div id="title_links">
+                    <a target="_blank" href="https://fb.me/leecb" rel="noreferrer" aria-label="Facebook page">{% include "svg/square-facebook.html" %}</i></a>
+                    <a target="_blank" href="https://github.com/leecbaker/" rel="noreferrer" aria-label="Github page">{% include "svg/square-github.html" %}</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/leecbaker" rel="noreferrer" aria-label="LinkedIn page">{% include "svg/linkedin.html" %}</i></a>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <div class="container round-top round-bottom">
-            <div id="content">
-                {% block content %} {% endblock content %}
-            </div>
-        </div>
-    </main>
+        <main>
+                <div id="content">
+                    {% block content %} {% endblock content %}
+                </div>
+        </main>
 
-    <footer>
-        <div class="container round-top">
-            <span id="copyright">&copy; 2011-2023 Lee C. Baker</span>
-        </div>
-    </footer>
+        <footer>
+            <span id="copyright">&copy; 2011&ndash;{{now() | date(format="%Y")}} Lee C. Baker</span>
+        </footer>
+    </div>
 </body>
 
 </html>

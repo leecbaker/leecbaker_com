@@ -1,6 +1,9 @@
 
 header {
 
+    background:  url('../img/lcb_com_header.jpg') no-repeat top;
+    background-size: cover;
+
     #title {
         color: white;
         border-spacing: 10px;
@@ -37,13 +40,6 @@ header {
     }
 
     height: 220px;
-    margin-bottom: 0.5em;
-
-
-    .container {
-        background:  url('../img/lcb_com_header.jpg') no-repeat top;
-        background-size: cover;
-    }
 
     #titlebar {
         height: 100%;
@@ -51,7 +47,7 @@ header {
         #title {
             padding-top: 60px;
         }
-    
+
         #title_links a {
             padding: 0.5em;
             padding-top: 0.4em;

@@ -12,33 +12,18 @@ a {
     padding: 1em;
 }
 
-
-main .container {
-    background: white;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+body .container {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    min-height: 100vh;
+
+    background: white;
 }
 
-footer .container {
-    background-image: linear-gradient(52deg,rgb(81, 107, 123), rgb(103, 108, 64));
-    margin-top: 0.5em;
+
+footer {
     padding-bottom: 2em;
     padding-top: 1em;
-}
-
-@media (min-width: 800px) {
-    .round-top {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-width: 0;
-    }
-    .round-bottom {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-width: 0;
-    }
 }
 
 .container {
@@ -58,10 +43,9 @@ section img {
     padding: 4px;
 }
 
-section {
-    border-bottom: 2px solid #ddd;
-}
-
-section:last-child {
-    border-bottom: none;
+.retired {
+    color: #555;
+    p {
+        font-size: smaller;
+    }
 }
